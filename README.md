@@ -45,22 +45,34 @@ This project has six major parts :
 
 ## Create one ec2 instance with ubuntu 22.04/t2.medium/all-traffic/20gb storage and connect with vs code and run below commands:
 
+## Update the required packages:
+
       sudo apt-get update && sudo apt-get upgrade -y
+      
+## Install python environment and activate the env      
+
       sudo apt install python3-venv -y
       python3 -m venv mlpro
       source mlpro/bin/activate
+
+ ## Clone the GITHUB repository:
+ 
       git clone https://github.com/vipulwarthe/ML-Model-Deploy-with-Flask-and-ec2.git
       ls
       cd ML-Model-Deploy-with-Flask-and-ec2/
-      ls
+      
+ ## Run the requirement file:     
+ 
       pip install -r requirement.txt 
       pip install chart-studio
       pip install catboost
       pip install xgboost
       sudo apt-get install libgomp1
 
-## Run ipynb file and then run app.py file       
+## Run ipynb file and then run app.py file     
+
       python3 app.py
+      
 ## you will connect your app with your instance DNS along with port 8080 on browser (paste below format in browser)
 
      ec2-34-202-233-140.compute-1.amazonaws.com:8080
